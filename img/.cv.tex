@@ -1,0 +1,101 @@
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass{resume} % Use the custom resume.cls style
+
+\usepackage[left=0.5in,top=0.3in,right=0.5in,bottom=0.3in]{geometry} % Document margins
+\newcommand{\tab}[1]{\hspace{.3\textwidth}\rlap{#1}}
+\newcommand{\itab}[1]{\hspace{0em}\rlap{#1}}
+\name{Marius Garbea} % Your name
+\address{3400 Lancaster Ave, Philadelphia PA} % Your address
+\address{(+1)215-802-3336 \\ mariusgarbea@ymail.com \\ mariusgarbea.github.io} % Your phone number, email, website
+
+\begin{document}
+
+%----------------------------------------------------------------------------------------
+%	EDUCATION SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{rSection}{Education}
+
+{\bf Drexel University} \hfill {September 2017 - June 2022 (expected)}
+\\ {\em BS Computer Science and BS Mathematics} \hfill {GPA: 3.98/4} \smallskip \\
+Teaching assistant for CS265 - Advanced Programming Techniques: Linux \\
+Co-founder and executive board member of Drexel Blockchain (first blockchain club at Drexel)
+
+\end{rSection}
+
+%----------------------------------------------------------------------------------------
+%	TECHNICAL STRENGTHS SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{rSection}{Technical Skills}
+
+\begin{tabular}{ @{} >{\bfseries}l @{\hspace{10ex}} l}
+Computer Languages & Java, Python, Javascript, C, C++, Bash, SQL, Go \\
+Software \& Tools & NodeJS, ReactJS, AngularJS, MongoDB, Spring, Hibernate, Git, \LaTeX \\
+\end{tabular}
+
+\end{rSection}
+
+%----------------------------------------------------------------------------------------
+%	WORK EXPERIENCE SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{rSection}{Experience}
+
+\begin{rSubsection}{ActivFix}{December 2017 - October 2018}{Software Engineer}{Bucharest, Romania}
+\item Refactored the codebase from a monolith to microservices using Spring Boot, reducing deployment time by 30\% and development start-up time by 70\%
+\item Developed an admin module and a payment module, speeding up the launch process by several months
+\item Configured and managed the infrastructure of the app using an Ubuntu cloud server and Nginx proxy server,  and wrote various automation scripts, reducing admin's manual work by 20\%
+\end{rSubsection}
+
+%------------------------------------------------
+
+\begin{rSubsection}{GovITHub}{October 2016 - February 2017}{Software Engineer}{Bucharest, Romania}
+\item Developed the front-end of a news distribution web application in ReactJS and its state tree in Redux
+\item Restructured ReactJS components to use static typing using Flow, increasing coverage from 30\% to 100\%
+\item Wrote black-box unit tests for front-end components and user interactions in Jest, reducing debugging time
+\end{rSubsection}
+
+\end{rSection}
+
+%----------------------------------------------------------------------------------------
+%	PROJECTS SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{rSection}{Projects}
+
+\begin{rSubsection}{Teens' Bucharest App}{Mobile version of a local news web app}{}{}
+\item Customized a video content playing library to achieve better performance for audio only content and increased the app's podcast player's responsiveness by 300\%
+\item Built three modules that facilitated full interaction with business content (text, social events, audio media)
+\item Used technologies such as React Native, Redux for state management and Reselect for selector caching
+\end{rSubsection}
+
+\begin{rSubsection}{SpeedPlan}{Event flyer scanning mobile app}{}{}
+\item Implemented a data parsing algorithm and a grayscale filter, improving text recognition by 10\%
+\item Designed the underlying architecture and structure of the app following MVC and DAO design patterns
+\item Used specific libraries for camera, file system and external apps interaction and integrated Tesseract OCR
+\end{rSubsection}
+
+\end{rSection}
+
+%----------------------------------------------------------------------------------------
+%	HONORS SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{rSection}{Honors, Awards \& Certifications}
+\begin{rSubsection}{}{}{}{}
+\item Drexel University Pennoni Honors College (top 10\%)
+\item Drexel University Founder’s Scholarship (60\% of tuition covered)
+\item DevHacks 2016 Hackathon, sponsored by Microsoft, Teamnet, SoftVision - 2nd/ 52 teams
+\item JSHacks 2016 Hackathon, sponsored by Endava and VisionMobile - 1st/ 13 teams
+\item Cisco Networking Academy IT Essentials Certification
+\end{rSubsection}
+\end{rSection}
+
+%----------------------------------------------------------------------------------------
+
+\end{document}
+\grid

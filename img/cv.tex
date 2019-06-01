@@ -5,24 +5,37 @@
 \documentclass{resume} % Use the custom resume.cls style
 
 \usepackage[left=0.5in,top=0.3in,right=0.5in,bottom=0.3in]{geometry} % Document margins
+\usepackage{hyperref}
+\usepackage{xcolor}
+\hypersetup{
+    colorlinks,
+    linkcolor={red!50!black},
+    citecolor={blue!50!black},
+    urlcolor={blue!80!black}
+}
 \newcommand{\tab}[1]{\hspace{.3\textwidth}\rlap{#1}}
 \newcommand{\itab}[1]{\hspace{0em}\rlap{#1}}
+\newcommand{\CS}{C\nolinebreak\hspace{-.05em}\raisebox{.6ex}{\scriptsize\bf \#}}
+\newcommand{\colorhref}[2]{\href{#1}{\color{blue}{#2}}}
+
 \name{Marius Garbea} % Your name
 \address{3400 Lancaster Ave, Philadelphia PA} % Your address
-\address{(+1)215-802-3336 \\ mariusgarbea@ymail.com \\ mariusgarbea.github.io} % Your phone number, email, website
+\address{(+1)215-802-3336 \\ \colorhref{mailto:mariusgarbea@ymail.com}{mariusgarbea@ymail.com} \\ \colorhref{https://mariusgarbea.github.io}{mariusgarbea.github.io}} % Your phone number, email, website
 
 \begin{document}
 
+\hspace{0pt}
+\vfill
 %----------------------------------------------------------------------------------------
 %	EDUCATION SECTION
 %----------------------------------------------------------------------------------------
 
 \begin{rSection}{Education}
-
-{\bf Drexel University} \hfill {September 2017 - June 2022 (expected)}
-\\ {\em BS Computer Science and BS Mathematics} \hfill {GPA: 3.98/4} \smallskip \\
-Teaching assistant for CS265 - Advanced Programming Techniques: Linux \\
-Co-founder and executive board member of Drexel Blockchain (first blockchain club at Drexel)
+{\bf Drexel University} \hfill {September 2017 - December 2021 (expected)}
+\\ {\em BS Computer Science and BS Mathematics with honors} \hfill {GPA: 3.98/4} \smallskip \\
+Member of the \colorhref{http://theory.cs.drexel.edu}{Computer Science Theory Group} at Drexel \\
+Teaching assistant for CS265 - Advanced Programming Techniques \\
+Co-founder and executive board member of Drexel Blockchain
 
 \end{rSection}
 
@@ -33,7 +46,7 @@ Co-founder and executive board member of Drexel Blockchain (first blockchain clu
 \begin{rSection}{Technical Skills}
 
 \begin{tabular}{ @{} >{\bfseries}l @{\hspace{10ex}} l}
-Computer Languages & Java, Python, Javascript, C, C++, Bash, SQL, Go \\
+Computer Languages & \CS, Python, Javascript, Java, C, Go, Bash, SQL \\
 Software \& Tools & NodeJS, ReactJS, AngularJS, MongoDB, Spring, Hibernate, Git, \LaTeX \\
 \end{tabular}
 
@@ -45,18 +58,18 @@ Software \& Tools & NodeJS, ReactJS, AngularJS, MongoDB, Spring, Hibernate, Git,
 
 \begin{rSection}{Experience}
 
-\begin{rSubsection}{ActivFix}{December 2017 - October 2018}{Software Engineer}{Bucharest, Romania}
-\item Refactored the codebase from a monolith to microservices using Spring Boot, reducing deployment time by 30\% and development start-up time by 70\%
-\item Developed an admin module and a payment module, speeding up the launch process by several months
-\item Configured and managed the infrastructure of the app using an Ubuntu cloud server and Nginx proxy server,  and wrote various automation scripts, reducing admin's manual work by 20\%
+\begin{rSubsection}{Susquehanna International Group}{March 2019 - September 2019}{Software Engineering Intern}{Philadelphia, PA}
+\item Built a system that transforms FIX messages provided by a trading platform to an internal format, allowing the company to log and reference any chain of transactions
+\item Added filtering features to a software that checks expected firewall settings against existing settings, allowing admins to group different policies for comparison
+\item Wrote a script for archiving and packaging files based on multiple criteria, used to move trading reports to long term storage
 \end{rSubsection}
 
 %------------------------------------------------
 
-\begin{rSubsection}{GovITHub}{October 2016 - February 2017}{Software Engineer}{Bucharest, Romania}
-\item Developed the front-end of a news distribution web application in ReactJS and its state tree in Redux
-\item Restructured ReactJS components to use static typing using Flow, increasing coverage from 30\% to 100\%
-\item Wrote black-box unit tests for front-end components and user interactions in Jest, reducing debugging time
+\begin{rSubsection}{ActivFix}{December 2017 - October 2018}{Software Engineering Intern}{Bucharest, Romania}
+\item Refactored the codebase from a monolith to microservices using Spring Boot, reducing deployment time and development start-up time
+\item Developed an admin module and a payment module, speeding up the launch process by several months
+\item Configured and managed the infrastructure of the app using an Ubuntu cloud server and Nginx proxy server, and wrote various automation scripts, reducing admin's manual work by 20\%
 \end{rSubsection}
 
 \end{rSection}
@@ -65,12 +78,12 @@ Software \& Tools & NodeJS, ReactJS, AngularJS, MongoDB, Spring, Hibernate, Git,
 %	PROJECTS SECTION
 %----------------------------------------------------------------------------------------
 
-\begin{rSection}{Projects}
+\begin{rSection}{Research and Personal Projects}
 
-\begin{rSubsection}{Teens' Bucharest App}{Mobile version of a local news web app}{}{}
-\item Customized a video content playing library to achieve better performance for audio only content and increased the app's podcast player's responsiveness by 300\%
-\item Built three modules that facilitated full interaction with business content (text, social events, audio media)
-\item Used technologies such as React Native, Redux for state management and Reselect for selector caching
+\begin{rSubsection}{Ascending auctions and split interval scheduling}{Research project}{}{}
+\item Converted a linear program for interval graphs to a tight 2-approximation rounding algorithm for weighted group interval scheduling
+\item Implemented a two-pass rounding algorithm for item distribution, simulating rounds of a truthful mechanism for ascending auctions
+\item Presented about easy and hard variants of interval scheduling to Drexel's theory group
 \end{rSubsection}
 
 \begin{rSubsection}{SpeedPlan}{Event flyer scanning mobile app}{}{}
@@ -82,19 +95,8 @@ Software \& Tools & NodeJS, ReactJS, AngularJS, MongoDB, Spring, Hibernate, Git,
 \end{rSection}
 
 %----------------------------------------------------------------------------------------
-%	HONORS SECTION
-%----------------------------------------------------------------------------------------
-
-\begin{rSection}{Honors, Awards \& Certifications}
-\begin{rSubsection}{}{}{}{}
-\item Drexel University Pennoni Honors College (top 10\%)
-\item Drexel University Founder’s Scholarship (60\% of tuition covered)
-\item DevHacks 2016 Hackathon, sponsored by Microsoft, Teamnet, SoftVision - 2nd/ 52 teams
-\item JSHacks 2016 Hackathon, sponsored by Endava and VisionMobile - 1st/ 13 teams
-\item Cisco Networking Academy IT Essentials Certification
-\end{rSubsection}
-\end{rSection}
-
-%----------------------------------------------------------------------------------------
+\vfill
+\hspace{0pt}
 
 \end{document}
+\grid
